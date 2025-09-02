@@ -57,16 +57,16 @@ export default function ProductPage({ params }: ProductPageProps) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse space-y-8">
-          <div className="h-8 bg-yellow-100 rounded w-32"></div>
+          <div className="h-8 bg-purple-100 rounded w-32"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="aspect-square bg-yellow-100 rounded-xl"></div>
+            <div className="aspect-square bg-purple-100 rounded-xl"></div>
             <div className="space-y-4">
-              <div className="h-8 bg-yellow-100 rounded w-3/4"></div>
-              <div className="h-6 bg-yellow-50 rounded w-1/2"></div>
-              <div className="h-10 bg-yellow-100 rounded w-1/3"></div>
+              <div className="h-8 bg-purple-100 rounded w-3/4"></div>
+              <div className="h-6 bg-purple-50 rounded w-1/2"></div>
+              <div className="h-10 bg-purple-100 rounded w-1/3"></div>
               <div className="space-y-2">
-                <div className="h-4 bg-yellow-50 rounded"></div>
-                <div className="h-4 bg-yellow-50 rounded w-3/4"></div>
+                <div className="h-4 bg-purple-50 rounded"></div>
+                <div className="h-4 bg-purple-50 rounded w-3/4"></div>
               </div>
             </div>
           </div>
@@ -92,11 +92,11 @@ export default function ProductPage({ params }: ProductPageProps) {
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <Card className="border-yellow-200 bg-yellow-50">
+  <Card className="border-purple-600 bg-purple-50">
           <CardContent className="p-8 text-center">
-            <Package className="h-12 w-12 text-[#d4af37] mx-auto mb-4" />
-            <h2 className="text-xl font-semibold text-[#c99700] mb-2">Product Not Found</h2>
-            <p className="text-[#b8860b] mb-4">The product you're looking for doesn't exist or has been removed.</p>
+            <Package className="h-12 w-12 text-purple-600 mx-auto mb-4" />
+            <h2 className="text-xl font-semibold text-blue-600 mb-2">Product Not Found</h2>
+            <p className="text-cyan-600 mb-4">The product you're looking for doesn't exist or has been removed.</p>
             <Link href="/products">
               <Button className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700">
                 Browse Products
@@ -143,14 +143,14 @@ export default function ProductPage({ params }: ProductPageProps) {
             />
             {discountPercentage > 0 && (
               <div className="absolute top-4 left-4">
-                <Badge className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white px-3 py-1 text-sm font-semibold shadow-lg">
+                <Badge className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-3 py-1 text-sm font-semibold shadow-lg">
                   {discountPercentage}% OFF
                 </Badge>
               </div>
             )}
             {product.isNew && (
               <div className="absolute top-4 right-4">
-                <Badge className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white px-3 py-1 text-sm font-semibold shadow-lg">
+                <Badge className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-3 py-1 text-sm font-semibold shadow-lg">
                   NEW
                 </Badge>
               </div>
@@ -167,8 +167,8 @@ export default function ProductPage({ params }: ProductPageProps) {
                   className={cn(
                     "aspect-square overflow-hidden rounded-lg border-2 transition-all duration-200 hover:scale-105",
                     selectedImage === index 
-                      ? "border-[#d4af37] shadow-lg shadow-yellow-200" 
-                      : "border-gray-200 hover:border-[#d4af37]"
+                      ? "border-purple-600 shadow-lg shadow-purple-200" 
+                      : "border-gray-200 hover:border-purple-600"
                   )}
                 >
                   <Image
@@ -191,10 +191,10 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="flex items-start justify-between">
               <h1 className="text-4xl font-bold text-gray-900 leading-tight">{product.name}</h1>
               <div className="flex items-center gap-2">
-                <Button variant="outline" size="icon" className="rounded-full hover:border-[#d4af37] hover:text-[#d4af37]">
+                <Button variant="outline" size="icon" className="rounded-full hover:border-purple-600 hover:text-purple-600">
                   <Heart className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" size="icon" className="rounded-full hover:border-[#d4af37] hover:text-[#d4af37]">
+                <Button variant="outline" size="icon" className="rounded-full hover:border-purple-600 hover:text-purple-600">
                   <Share2 className="h-5 w-5" />
                 </Button>
               </div>
@@ -211,14 +211,14 @@ export default function ProductPage({ params }: ProductPageProps) {
           <div className="space-y-2">
             {product.discountPrice ? (
               <div className="flex items-baseline gap-3">
-                <span className="text-4xl font-bold bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent">₹{product.discountPrice}</span>
+                <span className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">₹{product.discountPrice}</span>
                 <span className="text-xl text-gray-400 line-through">₹{product.price}</span>
                 <Badge className="bg-green-100 text-green-700 hover:bg-green-100 px-2 py-1">
                   Save ₹{product.price - product.discountPrice}
                 </Badge>
               </div>
             ) : (
-              <span className="text-4xl font-bold bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent">₹{product.price}</span>
+              <span className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">₹{product.price}</span>
             )}
             
             {/* Stock Status */}
@@ -241,29 +241,29 @@ export default function ProductPage({ params }: ProductPageProps) {
 
           {/* Key Features */}
           <div className="grid grid-cols-2 gap-4">
-            <div className="flex items-center gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-              <Truck className="h-6 w-6 text-[#d4af37]" />
+            <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-lg border border-purple-100">
+              <Truck className="h-6 w-6 text-purple-600" />
               <div>
                 <p className="font-medium text-gray-900">Free Shipping</p>
                 <p className="text-sm text-gray-600">On orders over ₹8,300</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-              <Shield className="h-6 w-6 text-[#d4af37]" />
+            <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-lg border border-purple-100">
+              <Shield className="h-6 w-6 text-purple-600" />
               <div>
                 <p className="font-medium text-gray-900">1 Year Warranty</p>
                 <p className="text-sm text-gray-600">Full coverage</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-              <Clock className="h-6 w-6 text-[#d4af37]" />
+            <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-lg border border-purple-100">
+              <Clock className="h-6 w-6 text-purple-600" />
               <div>
                 <p className="font-medium text-gray-900">Fast Delivery</p>
                 <p className="text-sm text-gray-600">2-3 business days</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 p-4 bg-yellow-50 rounded-lg border border-yellow-100">
-              <Award className="h-6 w-6 text-[#d4af37]" />
+            <div className="flex items-center gap-3 p-4 bg-purple-50 rounded-lg border border-purple-100">
+              <Award className="h-6 w-6 text-purple-600" />
               <div>
                 <p className="font-medium text-gray-900">Premium Quality</p>
                 <p className="text-sm text-gray-600">Certified authentic</p>
@@ -276,22 +276,22 @@ export default function ProductPage({ params }: ProductPageProps) {
 
           {/* Product Details Tabs */}
           <Tabs defaultValue="description" className="w-full">
-            <TabsList className="w-full bg-yellow-50 border border-yellow-100">
+            <TabsList className="w-full bg-purple-50 border border-purple-100">
               <TabsTrigger 
                 value="description" 
-                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#d4af37] data-[state=active]:via-[#c99700] data-[state=active]:to-[#b8860b] data-[state=active]:text-white"
+                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:via-blue-600 data-[state=active]:to-cyan-600 data-[state=active]:text-white"
               >
                 Description
               </TabsTrigger>
               <TabsTrigger 
                 value="specifications" 
-                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#d4af37] data-[state=active]:via-[#c99700] data-[state=active]:to-[#b8860b] data-[state=active]:text-white"
+                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:via-blue-600 data-[state=active]:to-cyan-600 data-[state=active]:text-white"
               >
                 Specifications
               </TabsTrigger>
               <TabsTrigger 
                 value="shipping" 
-                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#d4af37] data-[state=active]:via-[#c99700] data-[state=active]:to-[#b8860b] data-[state=active]:text-white"
+                className="flex-1 data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-600 data-[state=active]:via-blue-600 data-[state=active]:to-cyan-600 data-[state=active]:text-white"
               >
                 Shipping
               </TabsTrigger>
@@ -300,9 +300,9 @@ export default function ProductPage({ params }: ProductPageProps) {
             <TabsContent value="description" className="pt-6">
               <div className="prose prose-gray max-w-none">
                 <p className="text-gray-700 leading-relaxed text-lg">{product.description}</p>
-                <div className="mt-6 p-6 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl border border-yellow-200">
+                <div className="mt-6 p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-200">
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <Zap className="h-5 w-5 text-[#d4af37]" />
+                    <Zap className="h-5 w-5 text-purple-600" />
                     Premium Features
                   </h4>
                   <p className="text-gray-700 leading-relaxed">
@@ -315,7 +315,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             </TabsContent>
 
             <TabsContent value="specifications" className="pt-6">
-              <Card className="border-yellow-100">
+              <Card className="border-purple-100">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     {[
@@ -340,10 +340,10 @@ export default function ProductPage({ params }: ProductPageProps) {
 
             <TabsContent value="shipping" className="pt-6">
               <div className="space-y-6">
-                <Card className="border-yellow-100">
+                <Card className="border-purple-100">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-[#c99700]">
-                      <Truck className="h-5 w-5" />
+                    <CardTitle className="flex items-center gap-2 text-purple-600">
+                      <Truck className="h-5 w-5 text-purple-600" />
                       Shipping Information
                     </CardTitle>
                   </CardHeader>
@@ -366,7 +366,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                               <p className="font-medium text-gray-900">{option.type}</p>
                               <p className="text-sm text-gray-600">{option.time}</p>
                             </div>
-                            <span className="font-semibold bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent">{option.cost}</span>
+                            <span className="font-semibold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">{option.cost}</span>
                           </div>
                         ))}
                       </div>
@@ -383,16 +383,16 @@ export default function ProductPage({ params }: ProductPageProps) {
       <section className="mb-16">
         <div className="flex items-center gap-3 mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Recommended For You</h2>
-          <div className="h-1 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] rounded-full flex-1 max-w-32"></div>
+          <div className="h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-full flex-1 max-w-32"></div>
         </div>
         <Suspense fallback={
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="animate-pulse">
-                <div className="aspect-square bg-yellow-100 rounded-xl mb-4"></div>
+                <div className="aspect-square bg-purple-100 rounded-xl mb-4"></div>
                 <div className="space-y-2">
-                  <div className="h-4 bg-yellow-100 rounded w-3/4"></div>
-                  <div className="h-4 bg-yellow-50 rounded w-1/2"></div>
+                  <div className="h-4 bg-purple-100 rounded w-3/4"></div>
+                  <div className="h-4 bg-purple-50 rounded w-1/2"></div>
                 </div>
               </div>
             ))}
@@ -411,9 +411,9 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
           <Suspense fallback={
             <div className="space-y-6">
-              <div className="animate-pulse bg-yellow-50 h-32 rounded-xl"></div>
-              <div className="animate-pulse bg-yellow-50 h-24 rounded-xl"></div>
-              <div className="animate-pulse bg-yellow-50 h-28 rounded-xl"></div>
+              <div className="animate-pulse bg-purple-50 h-32 rounded-xl"></div>
+              <div className="animate-pulse bg-purple-50 h-24 rounded-xl"></div>
+              <div className="animate-pulse bg-purple-50 h-28 rounded-xl"></div>
             </div>
           }>
             <ProductReviews productId={id} />
@@ -423,7 +423,7 @@ export default function ProductPage({ params }: ProductPageProps) {
         <section>
           <div className="flex items-center gap-3 mb-8">
             <h2 className="text-3xl font-bold text-gray-900">You May Also Like</h2>
-            <div className="h-1 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] rounded-full flex-1 max-w-32"></div>
+            <div className="h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 rounded-full flex-1 max-w-32"></div>
           </div>
           <RelatedProducts currentProductId={id} category={product.category} />
         </section>
