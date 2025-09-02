@@ -78,7 +78,7 @@ export default function HeroCarousel() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     size="lg" 
-                    className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white  hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] text-white  w-full sm:w-auto shadow-lg" 
+                    className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700  w-full sm:w-auto shadow-lg" 
                     asChild
                   >
                     <Link href={item.link}>{item.cta}</Link>

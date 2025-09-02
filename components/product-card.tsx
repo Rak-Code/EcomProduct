@@ -119,7 +119,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       toast({
         title: "Removed from wishlist",
         description: `${product.name} has been removed from your wishlist.`,
-        className: "border-yellow-200 bg-yellow-50",
+        className: "border-purple-600 bg-purple-50",
       })
     } else {
       addToWishlist(product)
@@ -127,7 +127,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       toast({
         title: "Added to wishlist",
         description: `${product.name} has been added to your wishlist.`,
-        className: "border-yellow-200 bg-yellow-50",
+        className: "border-purple-600 bg-purple-50",
       })
     }
   }
@@ -143,14 +143,14 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <div
-      className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 product-card border border-gray-100 hover:border-yellow-200"
+      className="group relative rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-500 product-card border border-gray-100 hover:border-purple-600"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Discount Badge */}
       {discountPercentage > 0 && (
         <div className="absolute left-3 top-3 z-20">
-          <div className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg">
+          <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg">
             {discountPercentage}% OFF
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* New Badge */}
       {product.isNew && (
         <div className="absolute left-3 top-12 z-20">
-          <div className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg">
+          <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg">
             NEW
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           className={cn(
             "rounded-full backdrop-blur-sm transition-all duration-300 hover:scale-110",
             isWishlisted 
-              ? "bg-yellow-100/90 hover:bg-yellow-200/90" 
+              ? "bg-purple-100/90 hover:bg-purple-200/90" 
               : "bg-white/80 hover:bg-white/90"
           )}
           onClick={handleToggleWishlist}
@@ -182,8 +182,8 @@ export default function ProductCard({ product }: ProductCardProps) {
             className={cn(
               "h-5 w-5 transition-all duration-300", 
               isWishlisted 
-                ? "fill-[#d4af37] text-[#d4af37] scale-110" 
-                : "text-gray-600 hover:text-[#d4af37]"
+                ? "fill-purple-600 text-purple-600 scale-110" 
+                : "text-gray-600 hover:text-purple-600"
             )} 
           />
           <span className="sr-only">Add to wishlist</span>
@@ -220,9 +220,9 @@ export default function ProductCard({ product }: ProductCardProps) {
                   className={cn(
                     "h-4 w-4",
                     i < Math.floor(averageRating)
-                      ? "fill-[#d4af37] text-[#d4af37]"
+                      ? "fill-purple-600 text-purple-600"
                       : i < averageRating
-                      ? "fill-yellow-200 text-yellow-200"
+                      ? "fill-blue-400 text-blue-400"
                       : "fill-gray-200 text-gray-200"
                   )}
                 />
@@ -236,7 +236,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* Product Name */}
         <Link href={`/products/${product.id}`}>
-          <h3 className="font-semibold text-lg line-clamp-2 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] transition-colors duration-200 leading-tight">
+          <h3 className="font-semibold text-lg line-clamp-2 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 transition-colors duration-200 leading-tight">
             {product.name}
           </h3>
         </Link>
@@ -251,7 +251,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           <div className="space-y-1">
             {product.discountPrice ? (
               <div className="flex items-center gap-2">
-                <span className="font-bold text-xl bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400]">
+                <span className="font-bold text-xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700">
                   ₹{product.discountPrice}
                 </span>
                 <span className="text-sm text-gray-400 line-through">
@@ -259,7 +259,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </span>
               </div>
             ) : (
-              <span className="font-bold text-xl bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400]">
+              <span className="font-bold text-xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700">
                 ₹{product.price}
               </span>
             )}
@@ -270,7 +270,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             onClick={handleAddToCart}
             disabled={isAddingToCart}
             className={cn(
-              "rounded-full transition-all duration-300 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] shadow-lg hover:shadow-xl transform hover:scale-105",
+              "rounded-full transition-all duration-300 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 shadow-lg hover:shadow-xl transform hover:scale-105",
               isHovered ? "w-auto px-4" : "w-11 px-0",
               isAddingToCart && "opacity-80 cursor-not-allowed"
             )}

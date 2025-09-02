@@ -98,7 +98,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             <h2 className="text-xl font-semibold text-[#c99700] mb-2">Product Not Found</h2>
             <p className="text-[#b8860b] mb-4">The product you're looking for doesn't exist or has been removed.</p>
             <Link href="/products">
-              <Button className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] text-white">
+              <Button className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700">
                 Browse Products
               </Button>
             </Link>

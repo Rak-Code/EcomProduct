@@ -209,13 +209,13 @@ export default function Navbar() {
                   />
                 </div>
                 <span
-                  className="select-none text-[1.5rem] md:text-[2.25rem] font-semibold tracking-wide bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent drop-shadow-[0_0_4px_rgba(212,175,55,0.6)] font-[Raleway]"
+                  className="select-none text-[1.5rem] md:text-[2.25rem] font-semibold tracking-wide bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent font-[Raleway]"
                   style={{
                     letterSpacing: '0.08em',
                     textTransform: 'capitalize',
                   }}
                 >
-                  Paribito
+                  Athena
                 </span>
               </Link>
                <div className="mb-6 pb-4 border-b border-gray-200">
@@ -302,12 +302,7 @@ export default function Navbar() {
         md:text-[2.25rem] 
         font-semibold 
         tracking-wide 
-        bg-gradient-to-r 
-        from-[#d4af37] 
-        via-[#c99700] 
-        to-[#b8860b] 
-        bg-clip-text 
-        text-transparent 
+        bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent 
         font-[Raleway]
       "
       style={{
@@ -315,7 +310,7 @@ export default function Navbar() {
         textTransform: 'capitalize',
       }}
     >
-      Paribito
+      Athena
     </span>
   </div>
 </Link>

@@ -48,7 +48,7 @@ const FlairForwardSection = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white rounded-full mb-6 shadow-lg hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold rounded-full mb-6 shadow-lg hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 transition-all duration-300"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -66,7 +66,7 @@ const FlairForwardSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             Discover Your{" "}
-            <span className="bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
               Perfect Style
             </span>
           </motion.h2>
@@ -109,8 +109,8 @@ const FlairForwardSection = () => {
                   
                   {/* Floating Elements */}
                   <div className="absolute inset-0">
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-[#d4af37]/20 to-[#c99700]/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" />
-                    <div className="absolute bottom-6 left-6 w-8 h-8 bg-gradient-to-r from-[#b8860b]/15 to-[#d4af37]/25 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100" />
+                    <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-r from-purple-600/20 to-blue-600/30 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" />
+                    <div className="absolute bottom-6 left-6 w-8 h-8 bg-gradient-to-r from-cyan-600/15 to-purple-600/25 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100" />
                   </div>
                   
                   {/* Content Overlay */}
@@ -121,7 +121,7 @@ const FlairForwardSection = () => {
                       transition={{ duration: 0.3 }}
                     >
                       <div className="mb-4">
-                        <span className="inline-block px-3 py-1 bg-gradient-to-r from-[#d4af37]/20 via-[#c99700]/20 to-[#b8860b]/20 backdrop-blur-sm border border-[#d4af37]/30 rounded-full text-xs font-medium mb-3">
+                        <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-purple-600/30 rounded-full text-xs font-medium mb-3">
                           {collection.itemCount}
                         </span>
                         <h3 className="text-2xl font-bold mb-2 group-hover:text-white transition-colors duration-300">
@@ -134,7 +134,7 @@ const FlairForwardSection = () => {
                       
                       <Link
                         href={collection.href}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#d4af37]/80 via-[#c99700]/80 to-[#b8860b]/80 backdrop-blur-sm rounded-full text-white font-medium text-sm hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] transform group-hover:scale-105 transition-all duration-300 w-fit shadow-lg"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 backdrop-blur-sm rounded-full text-white font-semibold text-sm hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 transform group-hover:scale-105 transition-all duration-300 w-fit shadow-lg"
                       >
                         <span>Explore</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -143,7 +143,7 @@ const FlairForwardSection = () => {
                   </div>
                   
                   {/* Hover Border */}
-                  <div className="absolute inset-0 border-2 border-[#d4af37]/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 border-2 border-purple-600/40 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </Card>
             </motion.div>
@@ -161,7 +161,7 @@ const FlairForwardSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/products"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] via-[#c99700] to-[#b8860b] text-white font-semibold rounded-full hover:from-[#c99700] hover:via-[#b8860b] hover:to-[#a97400] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white font-semibold rounded-full hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>View All Collections</span>
               <ArrowRight className="w-5 h-5" />
@@ -169,7 +169,7 @@ const FlairForwardSection = () => {
             
             <Link
               href="/products?featured=true"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white border-2 border-[#d4af37]/30 text-[#d4af37] font-semibold rounded-full hover:bg-gradient-to-r hover:from-[#d4af37] hover:via-[#c99700] hover:to-[#b8860b] hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white border-2 border-purple-600/30 text-purple-600 font-semibold rounded-full hover:bg-gradient-to-r hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 hover:text-white hover:border-transparent transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>Featured Items</span>
               <Sparkles className="w-5 h-5" />

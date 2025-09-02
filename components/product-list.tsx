@@ -83,7 +83,7 @@ export default function ProductList() {
       {/* <Navbar key={`${wishlistItems.length}-${cartItems.length}`} /> */}
       <div className="flex justify-between items-center mt-8">
         <button
-          className="px-4 py-2 border rounded disabled:opacity-50"
+          className="px-4 py-2 border-0 rounded font-semibold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white shadow-lg transition-all duration-300 hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 disabled:opacity-50"
           onClick={() => loadProducts("prev")}
           disabled={currentPage === 1 || loading}
         >
@@ -91,7 +91,7 @@ export default function ProductList() {
         </button>
         <span>Page {currentPage}</span>
         <button
-          className="px-4 py-2 border rounded disabled:opacity-50"
+          className="px-4 py-2 border-0 rounded font-semibold bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 text-white shadow-lg transition-all duration-300 hover:from-purple-700 hover:via-blue-700 hover:to-cyan-700 disabled:opacity-50"
           onClick={() => loadProducts("next")}
           disabled={products.length < PRODUCTS_PER_PAGE || loading}
         >
